@@ -211,7 +211,7 @@ export default function App() {
   const activeTab = SCREEN_TO_TAB[nav.screen] ?? nav.tab;
 
   return (
-    <div style={{ width: "100%", height: "100vh", display: "flex", flexDirection: "column", overflow: "hidden", fontFamily: font, background: C.bg }}>
+    <div style={{ width: "100%", maxWidth: 430, height: "100vh", display: "flex", flexDirection: "column", overflow: "hidden", fontFamily: font, background: C.bg }}>
 
       {/* ── Onboarding ── */}
       {nav.screen === "splash" && <SplashScreen onComplete={() => go("login")} />}
