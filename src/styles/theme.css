@@ -1,0 +1,138 @@
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   Meridian Bank — Enterprise Core Banking Design System v2
+   ========================================================= */
+
+:root {
+  /* Brand & Action */
+  --color-blue-600: #1B4DD8;
+  --color-blue-700: #1539A8;
+  --color-blue-50:  #EEF3FE;
+
+  /* Neutrals */
+  --color-gray-900: #1A1F29;
+  --color-gray-700: #3E4756;
+  --color-gray-500: #6B7484;
+  --color-gray-300: #C8CDD6;
+  --color-gray-200: #E2E5EA;
+  --color-gray-100: #F0F2F5;
+  --color-gray-50:  #F7F8FA;
+  --color-white:    #FFFFFF;
+
+  /* Semantic */
+  --color-success-600: #147D45;
+  --color-success-50:  #E9F5EE;
+  --color-warning-600: #A6660A;
+  --color-warning-50:  #FBF3E4;
+  --color-danger-600:  #C42B1C;
+  --color-danger-50:   #FCEEEC;
+  --color-info-600:    #1B4DD8;
+  --color-info-50:     #EEF3FE;
+
+  /* Dark surfaces */
+  --color-navy-900: #0E1B33;
+  --color-navy-800: #16264A;
+
+  /* Radii */
+  --radius-input:  6px;
+  --radius-card:   8px;
+  --radius-modal:  10px;
+  --radius-pill:   999px;
+
+  /* Shadows */
+  --shadow-l1: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-l2: 0 4px 8px rgba(16, 24, 40, 0.10);
+  --shadow-l3: 0 12px 24px rgba(16, 24, 40, 0.14);
+
+  /* Legacy tokens for shadcn compatibility */
+  --font-size: 14px;
+  --background: #F0F2F5;
+  --foreground: #1A1F29;
+  --card: #FFFFFF;
+  --card-foreground: #1A1F29;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1F29;
+  --primary: #1B4DD8;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F8FA;
+  --secondary-foreground: #1A1F29;
+  --muted: #F0F2F5;
+  --muted-foreground: #6B7484;
+  --accent: #EEF3FE;
+  --accent-foreground: #1B4DD8;
+  --destructive: #C42B1C;
+  --destructive-foreground: #FFFFFF;
+  --border: #E2E5EA;
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --switch-background: #C8CDD6;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #1B4DD8;
+  --radius: 8px;
+  --sidebar: #0E1B33;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #1B4DD8;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #16264A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #16264A;
+  --sidebar-ring: #1B4DD8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: var(--font-size);
+    font-family: 'Inter', -apple-system, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
+    font-feature-settings: 'tnum' 1;
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-gray-900);
+  }
+
+  body {
+    background: var(--color-gray-100);
+    color: var(--color-gray-900);
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--color-blue-600);
+    outline-offset: 2px;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
